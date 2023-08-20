@@ -1,0 +1,436 @@
+:root {
+  --cor-primaria: #095513;
+  --cor-secundaria: grey;
+  --cor-footer: #1f2821;
+  --cor-toggle: #121212;
+  --cor-quarta: white;
+  --cor-terciaria: #f5f5f5;
+  --cor-list: #3994cc9b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto",
+    "Helvetica", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
+
+body {
+  margin: 0;
+  font-size: 12pt;
+  min-height: 100vh;
+  background-color: transparent;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+#api-link {
+  height: 2em;
+  width: 2em;
+  margin: 0.5em;
+  margin-left: calc(100vw - 2.5em);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 85vw;
+  margin: auto;
+}
+header {
+  margin: auto;
+  width: 85vw;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+}
+#titulo {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: auto;
+  align-items: center;
+}
+
+header .logo {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 80px; /* Ajuste a largura conforme necessário */
+  height: 40px; /* Isso mantém a proporção da imagem */
+}
+
+/*header img {
+  width: 20%;
+  display: flex;
+  align-items: end;
+  bottom: 0;
+}*/
+
+header h1 {
+  color: var(--cor-primaria);
+  font-size: 3rem;
+  font-weight: 900;
+  text-align: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  width: 70%;
+}
+
+input {
+  border: none;
+  outline: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#inputInicial {
+  margin: auto;
+  width: 80%;
+  height: 3em;
+  border: 2.5px solid var(--cor-secundaria);
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#campoBusca {
+  height: 94%;
+  width: 90%;
+  border-radius: inherit;
+  background-color: transparent !important;
+}
+
+#btnBuscar {
+  margin: auto;
+  height: 100%;
+  align-items: center;
+  color: green;
+  font-weight: 800;
+  background-color: green !important;
+}
+
+#resultadoDaBusca {
+  display: flex;
+  margin: -0.5em auto;
+  position: relative;
+  z-index: 1;
+  width: 70%;
+  padding: 2.5% 5%;
+  border-radius: 0.5em;
+  background-color: transparent;
+}
+
+#resultadoDaBusca img {
+  width: 10em;
+  height: 10em;
+  border-radius: 0.5em;
+}
+
+#opcoesBusca {
+  width: 100%;
+}
+
+.opcao-busca:hover {
+  cursor: pointer;
+  border-radius: 0.5em;
+  background-color: var(--cor-list);
+}
+#resultado {
+  width: 90%;
+  margin: auto;
+}
+
+main img {
+  height: 10em;
+  width: 10em;
+  border-radius: 0.5em;
+}
+
+#home {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.personagem {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--cor-terciaria);
+  width: 28em;
+  height: 17em;
+  gap: 1em;
+  margin: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1em;
+  box-shadow: 10px 10px 5px 3px rgba(0, 0, 0, 0.1);
+}
+
+.personagem-imagem {
+  width: 50%;
+}
+
+.personagem-dados {
+  width: 50%;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.personagem-dados h2 {
+  font-size: 1.9em;
+  font-weight: 800;
+  color: var(--cor-primaria);
+}
+
+.personagem-dados p span {
+  color: var(--cor-secundaria);
+}
+
+#pag {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5em 0;
+  gap: 5%;
+  font-weight: 500;
+}
+
+#numero-pa {
+  font-weight: 500;
+}
+
+.btn-page {
+  color: var(--cor-primaria);
+  padding: 0.5em 1em;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+#pagina-atual {
+  display: flex;
+  align-items: end;
+  margin-top: 5em;
+}
+
+#imagem-Rick-and-Morty {
+  margin: auto;
+  display: flex;
+  height: auto;
+  width: 30%;
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #414040;
+  color: white;
+  padding: 30px 0;
+  gap: 50px;
+}
+
+footer nav {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+}
+
+footer span {
+  font-weight: bolder;
+}
+
+footer span {
+  opacity: 0.5;
+  transition: 0.2s;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+span:hover {
+  opacity: 1;
+  color: green;
+}
+
+#informacoes {
+  display: flex;
+  justify-content: center;
+  padding-top: 2em;
+  gap: 8%;
+  color: var(--cor-quarta);
+}
+
+#desenvolvedor {
+  color: var(--cor-quarta);
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 2%;
+}
+
+#redesSociais {
+  /*margin: auto;*/
+  margin-bottom: 100px;
+  padding: 1.2em;
+}
+
+i {
+  color: var(--cor-quarta);
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  font-size: 1.5em;
+}
+
+i:hover {
+  font-size: 2.5em;
+}
+
+#linkedin:hover {
+  color: #0077b5;
+}
+#git:hover {
+  color: #6f42c1;
+}
+#email:hover {
+  color: #ffa500;
+}
+
+#desenvolvedor p {
+  /*margin: auto;*/
+  margin-top: 20px;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.7em;
+  height: 0.9em;
+}
+.exibirStatus {
+  width: 0.8em;
+  height: 0.8em;
+  border-radius: 50%;
+  background-color: var(--cor-secundaria);
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 9pt;
+  }
+
+  header h1 {
+    width: 70%;
+    font-size: 1.2em;
+  }
+
+  header img {
+    padding-top: 1em;
+  }
+
+  #resultadoDaBusca {
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+  }
+  #resultadoDaBusca img {
+    width: 7em;
+    height: 7em;
+  }
+
+  #opcoesBusca {
+    width: 88%;
+    margin: auto;
+  }
+
+  .personagem {
+    width: 100%;
+    height: 15em;
+  }
+  .personagem h2 {
+    font-size: 1em;
+  }
+
+  #pag {
+    margin: 1em 0;
+    gap: 1%;
+  }
+
+  #imagem-Rick-and-Morty {
+    margin-top: 7%;
+    margin-bottom: 7%;
+    width: 50%;
+  }
+
+  #desenvolvedor {
+    margin-top: 7%;
+  }
+}
+
+@media (max-width: 360px) {
+  header h1 {
+    width: 80%;
+    font-size: 1.1em;
+  }
+
+  footer {
+    font-size: 8pt;
+    height: 17em;
+  }
+
+  #informacoes {
+    align-items: center;
+    flex-direction: column;
+    line-height: 0;
+  }
+
+  #desenvolvedor {
+    margin: auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
+  }
+
+  #redesSociais {
+    margin: auto;
+    padding: 1em;
+    margin-top: 2%;
+  }
+}
+
+#theme-toggle {
+  color: var(--cor-toggle);
+  font-size: 2em;
+  margin-left: calc(100vw - 2.5em);
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+#theme-toggle:hover {
+  font-size: 2.1em;
+  color: inherit;
+}
+
+#theme-toggle.rotate {
+  transform: rotate(180deg);
+}

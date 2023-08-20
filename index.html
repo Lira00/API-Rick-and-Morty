@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="./images/pngfind.com-morty-png-964203.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <title>Rick and Morty</title>
+  </head>
+  <body>
+
+    <header>
+      <img
+      class="logo"
+      src="https://repository-images.githubusercontent.com/120371205/b6740400-92d4-11ea-8a13-d5f6e0558e9b"
+      alt=""
+    />
+      <div id="titulo">
+        <h1>API de Rick and Morty</h1>
+      </div>
+      <div id="inputInicial">
+        <input
+          type="text"
+          id="campoBusca"
+          placeholder="Pesquise"
+        />
+        <button type="submit" id="btnBuscar"><i class="bi bi-search"></i></button>
+      </div>
+      <section id="resultadoDaBusca">
+        <div id="opcoesBusca"></div>
+        <div id="resultado"></div>
+      </section>
+    </header>
+
+    <main>
+      <div id="home"></div>
+
+      <div>
+        <section id="pag">
+          <button class="btn-page" id="pagina-anterior">Previous</button>
+          <p id="pagina-atual"><span id="numero-pa"> 1 </span></p>
+          <button class="btn-page" id="proxima-pagina">Next</button>
+        </section>
+
+        <img id="imagem-Rick-and-Morty" src="./rick-and-morty-portal-shoes-white-clothing-zavvi-23.png" alt="Rick and Morty" srcset="">
+      </div>
+    </main>
+
+    <footer>
+      <nav>
+        <h4>Personagens: <span id="personagens">826</span></h4>
+        <h4>Localizações: <span id="localizacoes">126</span></h4>
+        <h4>Episódios: <span id="episodios"></span>51</h4>
+      </nav>
+
+      <section id="desenvolvedor">
+        <section id="Social">
+          <button>
+            <a href="https://github.com/Lira00" target="_blank">
+              <i id="git" class="bi bi-github"></i>
+            </a>
+          </button>
+          <button>
+            <a href="mailto:victorliranfsu@gmail.com" target="_blank">
+              <i id="email" class="bi bi-envelope-fill"></i>
+            </a>
+          </button>
+        </section>
+
+        <p>
+          Desenvolvido por:
+          <a href="https://github.com/Lira00" target="_blank"
+            ><span class="name">Victor Lira</span></a
+          >
+          em 2023
+        </p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
